@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="t18">
+      <UniqueIdentifier>{912087fb-9bff-4488-8dea-e4b35a32b8d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\timeseries">
+      <UniqueIdentifier>{d1b16536-8098-45dc-a2ba-f8a14bf78f57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\utils">
+      <UniqueIdentifier>{80c37fd0-31eb-4ccb-b1dd-5dbcf8d57b1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\feeder">
+      <UniqueIdentifier>{c3261d5f-1c3b-4a3a-9f5f-2462c3673e37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\tfConverter">
+      <UniqueIdentifier>{fc853afc-5a81-43bf-8ede-48d1cee7b4fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\algs">
+      <UniqueIdentifier>{b9141de2-f959-4626-98f5-f47750823061}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\ts">
+      <UniqueIdentifier>{893512d6-2061-44f1-be7a-43ad83eb9b28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\exec">
+      <UniqueIdentifier>{4bc618f0-02ce-4904-a9f0-a9f6de8c0802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\market">
+      <UniqueIdentifier>{675131b6-c060-4169-a824-3d587c01ca16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\debug">
+      <UniqueIdentifier>{7157dc0c-0920-466b-a204-df1646cc2009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\algs\code">
+      <UniqueIdentifier>{e874ee8a-01c7-4a60-951d-2a9518a5e678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\feeder\adapters">
+      <UniqueIdentifier>{b221bc21-1ba7-4534-a786-d33789dd1933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\_base">
+      <UniqueIdentifier>{5542010d-92c0-40b0-862c-79c7e7b9ce85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\_date_time">
+      <UniqueIdentifier>{fdd9ae2c-0c15-4691-a1cf-0fb264d89980}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="t18\proxy">
+      <UniqueIdentifier>{d74b1a45-1416-441b-b809-489ba2643a66}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\hana.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\name_of_type.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\timeseries\TsStor.h">
+      <Filter>t18\timeseries</Filter>
+    </ClInclude>
+    <ClInclude Include="CopyMoveTestClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\debug.h">
+      <Filter>t18</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\base.h">
+      <Filter>t18</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\base_filesystem.h">
+      <Filter>t18</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\date_time.h">
+      <Filter>t18</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\tfConverter\dailyhm.h">
+      <Filter>t18\tfConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\tfConverter\tfConvBase.h">
+      <Filter>t18\tfConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\scope_exit.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\ma.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\ts\MaCross.h">
+      <Filter>t18\ts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\exec\trade.h">
+      <Filter>t18\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\exec\iExecTrade.h">
+      <Filter>t18\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\exec\tradingInterface.h">
+      <Filter>t18\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\market\MarketDataStor.h">
+      <Filter>t18\market</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\market\MarketDataStorServ.h">
+      <Filter>t18\market</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\market\ticker.h">
+      <Filter>t18\market</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\market\tickerServer.h">
+      <Filter>t18\market</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\timeseries\updatesHandler.h">
+      <Filter>t18\timeseries</Filter>
+    </ClInclude>
+    <ClInclude Include="publicIntf_tickerServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\feeder\tickerUpdater.h">
+      <Filter>t18\feeder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\exec\backtester.h">
+      <Filter>t18\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\ts\MaCrossO.h">
+      <Filter>t18\ts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\ts\_base.h">
+      <Filter>t18\ts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\myFile.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\ema.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\_base.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\dema.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\tema.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\BoostAcc.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn_defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\code\ma.h">
+      <Filter>t18\algs\code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\code\_base.h">
+      <Filter>t18\algs\code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\code\ema.h">
+      <Filter>t18\algs\code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\code\dema.h">
+      <Filter>t18\algs\code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\code\tema.h">
+      <Filter>t18\algs\code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\code\BoostAcc.h">
+      <Filter>t18\algs\code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\code\elementile.h">
+      <Filter>t18\algs\code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\elementile.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\percentile.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\code\percentile.h">
+      <Filter>t18\algs\code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\feeder\memory.h">
+      <Filter>t18\feeder</Filter>
+    </ClInclude>
+    <ClInclude Include="algsRunner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\AlgsMap.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\obj_traits.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\HanaDescrMaps.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\HanaDataMaps.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\_all.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\code\_tStor_lenBased.h">
+      <Filter>t18\algs\code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\code\percentRank.h">
+      <Filter>t18\algs\code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\percentRank.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\regHandle.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\call_wrappers.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\forwarder.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\exec\assocTradeInfo.h">
+      <Filter>t18\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\timeseries\timeframeStor.h">
+      <Filter>t18\timeseries</Filter>
+    </ClInclude>
+    <ClInclude Include="publicIntf_timeframeServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\algs\inspectLowerTF.h">
+      <Filter>t18\algs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\timeseries\TimestampStor.h">
+      <Filter>t18\timeseries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\debug\tsqDump.h">
+      <Filter>t18\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\HanaTuples.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\HanaSets.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\timeseries\Timeframe.h">
+      <Filter>t18\timeseries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\market\TickerId.h">
+      <Filter>t18\market</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\market\tickerBase.h">
+      <Filter>t18\market</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\timefilter.h">
+      <Filter>t18</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\feeder\adapters\csv.h">
+      <Filter>t18\feeder\adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\feeder\singleFile.h">
+      <Filter>t18\feeder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\tags.h">
+      <Filter>t18</Filter>
+    </ClInclude>
+    <ClInclude Include="dummyMktFwd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\feeder\multiFile.h">
+      <Filter>t18\feeder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\market\TickerUpdatesHandler.h">
+      <Filter>t18\market</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_base\_base.h">
+      <Filter>t18\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_base\tsq_data.h">
+      <Filter>t18\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_base\tsTick.h">
+      <Filter>t18\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_base\tsohlcv.h">
+      <Filter>t18\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_date_time\_fwd.h">
+      <Filter>t18\_date_time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_date_time\_uglyTime.h">
+      <Filter>t18\_date_time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_date_time\_dt_impl.h">
+      <Filter>t18\_date_time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_date_time\date.h">
+      <Filter>t18\_date_time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_date_time\time.h">
+      <Filter>t18\_date_time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_date_time\timestamp.h">
+      <Filter>t18\_date_time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_base\tsDirTick.h">
+      <Filter>t18\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\exec\_tradeEnums.h">
+      <Filter>t18\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\proxy\protocol.h">
+      <Filter>t18\proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\atomic_flags_set.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\proxy\client.h">
+      <Filter>t18\proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\compiler.h">
+      <Filter>t18</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\spinlock.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\_base\tsDeal.h">
+      <Filter>t18\_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\utils\std.h">
+      <Filter>t18\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\t18\tfConverter\_base.h">
+      <Filter>t18\tfConverter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="t18_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TsStor_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dtohlcv_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tfConv-dailyhm_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ticker_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="backtester_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algs_exports.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algs_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="date-time_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TimestampStor_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multiFile_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="singleFile_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\t18\algs\readme.ru.md">
+      <Filter>t18\algs</Filter>
+    </None>
+    <None Include="..\license" />
+    <None Include="..\readme.md" />
+    <None Include="..\readme.ru.md" />
+    <None Include="..\t18\notes.ru.md">
+      <Filter>t18</Filter>
+    </None>
+  </ItemGroup>
+</Project>

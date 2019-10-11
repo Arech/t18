@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DE2305CE-B5A3-43F7-823A-FABB62193D30}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>t18_tests</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>t18_tests</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>LLVM-vs2014</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>LLVM-vs2014</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>LLVM-vs2014</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>LLVM-vs2014</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\c++\boost;D:\c++\googletest\googletest\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\c++\googletest\googletest\msvc\2010\gtest\$(Platform)-$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\c++\boost;D:\c++\googletest\googletest\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\c++\googletest\googletest\msvc\2010\gtest\$(Platform)-$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\c++\boost;D:\c++\googletest\googletest\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\c++\googletest\googletest\msvc\2010\gtest\$(Platform)-$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\c++\boost;D:\c++\googletest\googletest\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\c++\googletest\googletest\msvc\2010\gtest\$(Platform)-$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <AdditionalOptions>-Wno-c++98-compat -Wno-reserved-id-macro -Wno-c++98-c++11-compat -Wno-c++98-compat-pedantic -Wno-extra-semi -Wno-newline-eof -Wsign-conversion -Wfloat-conversion -Wno-c++17-extensions -Wno-unused-member-function -Wno-unused-template -Wall -Wextra -Wno-double-promotion -Wno-missing-prototypes %(AdditionalOptions)</AdditionalOptions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <EnablePREfast>false</EnablePREfast>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>-Wno-c++98-compat -Wno-reserved-id-macro -Wno-c++98-c++11-compat -Wno-c++98-compat-pedantic -Wno-extra-semi -Wno-newline-eof -Wsign-conversion -Wfloat-conversion -Wno-c++17-extensions -Wno-unused-member-function -Wno-unused-template -Wall -Wextra -Wno-double-promotion -Wno-missing-prototypes %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <AdditionalOptions>-Wno-c++98-compat -Wno-reserved-id-macro -Wno-c++98-c++11-compat -Wno-c++98-compat-pedantic -Wno-extra-semi -Wno-newline-eof -Wsign-conversion -Wfloat-conversion -Wno-c++17-extensions -Wno-unused-member-function -Wno-unused-template -Wall -Wextra -Wno-double-promotion -Wno-missing-prototypes %(AdditionalOptions)</AdditionalOptions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <EnablePREfast>false</EnablePREfast>
+      <AdditionalOptions>-Wno-c++98-compat -Wno-reserved-id-macro -Wno-c++98-c++11-compat -Wno-c++98-compat-pedantic -Wno-extra-semi -Wno-newline-eof -Wsign-conversion -Wfloat-conversion -Wno-c++17-extensions -Wno-unused-member-function -Wno-unused-template -Wall -Wextra -Wno-double-promotion -Wno-missing-prototypes %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\t18\compiler.h" />
+    <ClInclude Include="..\t18\proxy\client.h" />
+    <ClInclude Include="..\t18\proxy\protocol.h" />
+    <ClInclude Include="..\t18\algs\AlgsMap.h" />
+    <ClInclude Include="..\t18\algs\BoostAcc.h" />
+    <ClInclude Include="..\t18\algs\code\BoostAcc.h" />
+    <ClInclude Include="..\t18\algs\code\dema.h" />
+    <ClInclude Include="..\t18\algs\code\elementile.h" />
+    <ClInclude Include="..\t18\algs\code\ema.h" />
+    <ClInclude Include="..\t18\algs\code\ma.h" />
+    <ClInclude Include="..\t18\algs\code\percentile.h" />
+    <ClInclude Include="..\t18\algs\code\percentRank.h" />
+    <ClInclude Include="..\t18\algs\code\tema.h" />
+    <ClInclude Include="..\t18\algs\code\_base.h" />
+    <ClInclude Include="..\t18\algs\code\_tStor_lenBased.h" />
+    <ClInclude Include="..\t18\algs\dema.h" />
+    <ClInclude Include="..\t18\algs\elementile.h" />
+    <ClInclude Include="..\t18\algs\ema.h" />
+    <ClInclude Include="..\t18\algs\inspectLowerTF.h" />
+    <ClInclude Include="..\t18\algs\ma.h" />
+    <ClInclude Include="..\t18\algs\percentile.h" />
+    <ClInclude Include="..\t18\algs\percentRank.h" />
+    <ClInclude Include="..\t18\algs\tema.h" />
+    <ClInclude Include="..\t18\algs\_all.h" />
+    <ClInclude Include="..\t18\algs\_base.h" />
+    <ClInclude Include="..\t18\base.h" />
+    <ClInclude Include="..\t18\base_filesystem.h" />
+    <ClInclude Include="..\t18\debug.h" />
+    <ClInclude Include="..\t18\date_time.h" />
+    <ClInclude Include="..\t18\debug\tsqDump.h" />
+    <ClInclude Include="..\t18\exec\assocTradeInfo.h" />
+    <ClInclude Include="..\t18\exec\backtester.h" />
+    <ClInclude Include="..\t18\exec\iExecTrade.h" />
+    <ClInclude Include="..\t18\exec\trade.h" />
+    <ClInclude Include="..\t18\exec\tradingInterface.h" />
+    <ClInclude Include="..\t18\exec\_tradeEnums.h" />
+    <ClInclude Include="..\t18\feeder\adapters\csv.h" />
+    <ClInclude Include="..\t18\feeder\multiFile.h" />
+    <ClInclude Include="..\t18\feeder\memory.h" />
+    <ClInclude Include="..\t18\feeder\singleFile.h" />
+    <ClInclude Include="..\t18\feeder\tickerUpdater.h" />
+    <ClInclude Include="..\t18\market\MarketDataStor.h" />
+    <ClInclude Include="..\t18\market\MarketDataStorServ.h" />
+    <ClInclude Include="..\t18\market\ticker.h" />
+    <ClInclude Include="..\t18\market\tickerBase.h" />
+    <ClInclude Include="..\t18\market\TickerId.h" />
+    <ClInclude Include="..\t18\market\tickerServer.h" />
+    <ClInclude Include="..\t18\market\TickerUpdatesHandler.h" />
+    <ClInclude Include="..\t18\tags.h" />
+    <ClInclude Include="..\t18\tfConverter\dailyhm.h" />
+    <ClInclude Include="..\t18\tfConverter\tfConvBase.h" />
+    <ClInclude Include="..\t18\tfConverter\_base.h" />
+    <ClInclude Include="..\t18\timefilter.h" />
+    <ClInclude Include="..\t18\timeseries\timeframeStor.h" />
+    <ClInclude Include="..\t18\timeseries\Timeframe.h" />
+    <ClInclude Include="..\t18\timeseries\TimestampStor.h" />
+    <ClInclude Include="..\t18\timeseries\TsStor.h" />
+    <ClInclude Include="..\t18\timeseries\updatesHandler.h" />
+    <ClInclude Include="..\t18\ts\_base.h" />
+    <ClInclude Include="..\t18\ts\MaCross.h" />
+    <ClInclude Include="..\t18\ts\MaCrossO.h" />
+    <ClInclude Include="..\t18\utils\atomic_flags_set.h" />
+    <ClInclude Include="..\t18\utils\call_wrappers.h" />
+    <ClInclude Include="..\t18\utils\forwarder.h" />
+    <ClInclude Include="..\t18\utils\hana.h" />
+    <ClInclude Include="..\t18\utils\HanaDataMaps.h" />
+    <ClInclude Include="..\t18\utils\HanaDescrMaps.h" />
+    <ClInclude Include="..\t18\utils\HanaSets.h" />
+    <ClInclude Include="..\t18\utils\HanaTuples.h" />
+    <ClInclude Include="..\t18\utils\myFile.h" />
+    <ClInclude Include="..\t18\utils\name_of_type.h" />
+    <ClInclude Include="..\t18\utils\obj_traits.h" />
+    <ClInclude Include="..\t18\utils\regHandle.h" />
+    <ClInclude Include="..\t18\utils\scope_exit.h" />
+    <ClInclude Include="..\t18\utils\spinlock.h" />
+    <ClInclude Include="..\t18\utils\std.h" />
+    <ClInclude Include="..\t18\_base\tsDeal.h" />
+    <ClInclude Include="..\t18\_base\tsDirTick.h" />
+    <ClInclude Include="..\t18\_base\tsohlcv.h" />
+    <ClInclude Include="..\t18\_base\tsq_data.h" />
+    <ClInclude Include="..\t18\_base\tsTick.h" />
+    <ClInclude Include="..\t18\_base\_base.h" />
+    <ClInclude Include="..\t18\_date_time\date.h" />
+    <ClInclude Include="..\t18\_date_time\time.h" />
+    <ClInclude Include="..\t18\_date_time\timestamp.h" />
+    <ClInclude Include="..\t18\_date_time\_fwd.h" />
+    <ClInclude Include="..\t18\_date_time\_dt_impl.h" />
+    <ClInclude Include="..\t18\_date_time\_uglyTime.h" />
+    <ClInclude Include="algsRunner.h" />
+    <ClInclude Include="cmn_defs.h" />
+    <ClInclude Include="CopyMoveTestClass.h" />
+    <ClInclude Include="dummyMktFwd.h" />
+    <ClInclude Include="publicIntf_timeframeServer.h" />
+    <ClInclude Include="publicIntf_tickerServer.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="algs_exports.cpp" />
+    <ClCompile Include="algs_test.cpp" />
+    <ClCompile Include="backtester_test.cpp" />
+    <ClCompile Include="singleFile_test.cpp" />
+    <ClCompile Include="multiFile_test.cpp" />
+    <ClCompile Include="date-time_test.cpp" />
+    <ClCompile Include="dtohlcv_test.cpp" />
+    <ClCompile Include="TimestampStor_test.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="t18_tests.cpp" />
+    <ClCompile Include="tfConv-dailyhm_test.cpp" />
+    <ClCompile Include="ticker_test.cpp" />
+    <ClCompile Include="TsStor_test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\license" />
+    <None Include="..\readme.md" />
+    <None Include="..\readme.ru.md" />
+    <None Include="..\t18\algs\readme.ru.md" />
+    <None Include="..\t18\notes.ru.md" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
