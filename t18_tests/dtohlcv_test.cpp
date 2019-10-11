@@ -1,6 +1,6 @@
 /*
     This file is a part of t18 project (C++17 framework for algotrading)
-    Copyright (C) 2019, Arech (al.rech@gmail.com; https://github.com/Arech)
+    Copyright (C) 2019, Arech (aradvert@gmail.com; https://github.com/Arech)
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

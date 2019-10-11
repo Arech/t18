@@ -1,7 +1,7 @@
 /*
 This file is a part of NNTL project (https://github.com/Arech/nntl)
 
-Copyright (c) 2015-2019, Arech (al.rech@gmail.com; https://github.com/Arech)
+Copyright (c) 2015-2019, Arech (aradvert@gmail.com; https://github.com/Arech)
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
