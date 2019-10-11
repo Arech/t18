@@ -289,7 +289,6 @@
     <None Include="..\license" />
     <None Include="..\readme.md" />
     <None Include="..\readme.ru.md" />
-    <None Include="..\t18\algs\readme.ru.md" />
     <None Include="..\t18\notes.ru.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

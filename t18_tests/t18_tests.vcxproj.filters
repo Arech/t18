@@ -391,9 +391,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\t18\algs\readme.ru.md">
-      <Filter>t18\algs</Filter>
-    </None>
     <None Include="..\license" />
     <None Include="..\readme.md" />
     <None Include="..\readme.ru.md" />
