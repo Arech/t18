@@ -84,3 +84,9 @@
 #define LIKELY_CASE(var, likelyCaseNum) __builtin_expect((var), (likelyCaseNum))
 
 #define T18_UNREF(a) ((void)(a))
+
+#if defined(__has_include)
+#define T18_HAS_INCLUDE(f) __has_include(f)
+#else
+#define T18_HAS_INCLUDE(f) 0
+#endif
