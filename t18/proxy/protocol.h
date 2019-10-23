@@ -78,6 +78,8 @@ namespace t18 {
 		static constexpr size_t Cli2Srv_PacketHdr_Size = 4;
 		T18_COMP_PRAGMA_PACK_POP_ASSERT_SIZE(Cli2Srv_PacketHdr, Cli2Srv_PacketHdr_Size);
 
+		static constexpr size_t maxPossible_Cli2Srv_Packet_Payload_Len = ::std::numeric_limits<decltype(Cli2Srv_PacketHdr::wTotalPacketLen)>::max();
+
 		//////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////
 		
