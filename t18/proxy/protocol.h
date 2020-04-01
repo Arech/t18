@@ -164,11 +164,13 @@ namespace t18 {
 				return static_cast<const char*>(_b);
 			}
 
-			tsDirTick to_tsDirTick()const noexcept {
-				return tsDirTick(ts, pr, static_cast<volume_t>(volLots), static_cast<bool>(bLong));
+			tsDirTick to_tsDirTick(const volume_lots_t lotSize)const noexcept {
+				T18_ASSERT(lotSize > 0);
+				return tsDirTick(ts, pr, static_cast<volume_t>(volLots)*lotSize, static_cast<bool>(bLong));
 			}
-			tsTick to_tsTick()const noexcept {
-				return tsTick(ts, pr, static_cast<volume_t>(volLots));
+			tsTick to_tsTick(const volume_lots_t lotSize)const noexcept {
+				T18_ASSERT(lotSize > 0);
+				return tsTick(ts, pr, static_cast<volume_t>(volLots)*lotSize);
 			}
 		};
 		static constexpr size_t prxyTsDeal_Size = 8 + (sizeof(real_t) > sizeof(int) ? 8 : 4) + 4 + 4 + 1 + 1 + 2;
