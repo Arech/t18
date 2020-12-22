@@ -166,11 +166,11 @@ namespace t18 {
 
 			tsDirTick to_tsDirTick(const volume_lots_t lotSize)const noexcept {
 				T18_ASSERT(lotSize > 0);
-				return tsDirTick(ts, pr, static_cast<volume_t>(volLots)*lotSize, static_cast<bool>(bLong));
+				return tsDirTick(ts, pr, static_cast<volume_t>(volLots*lotSize), static_cast<bool>(bLong));
 			}
 			tsTick to_tsTick(const volume_lots_t lotSize)const noexcept {
 				T18_ASSERT(lotSize > 0);
-				return tsTick(ts, pr, static_cast<volume_t>(volLots)*lotSize);
+				return tsTick(ts, pr, static_cast<volume_t>(volLots*lotSize));
 			}
 		};
 		static constexpr size_t prxyTsDeal_Size = 8 + (sizeof(real_t) > sizeof(int) ? 8 : 4) + 4 + 4 + 1 + 1 + 2;
@@ -205,8 +205,12 @@ namespace t18 {
 				return ::std::string(b);
 			}
 
-			static prxyTickerInfo createInvalid()noexcept {
-				return{ 0,0,0,0 };
+			static prxyTickerInfo createInvalid()noexcept { return{ 0,0,0,0 }; }
+			void reset()noexcept {
+				minStepSize = real_t(0);
+				precision = 0;
+				lotSize = 0;
+				tid = 0;
 			}
 		};
 		static constexpr size_t prxyTickerInfo_Size = (sizeof(real_t) > sizeof(int) ? 8 : 4) + 4 + 4 + 1;
