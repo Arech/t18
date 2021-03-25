@@ -144,9 +144,10 @@ namespace t18 {
 		T18_COMP_PRAGMA_PACK(4);
 		struct prxyTsDeal {
 			mxTimestamp ts;
-			real_t pr;
-			volume_lots_t volLots;
 			dealnum_t dealNum;
+			real_t pr;
+
+			volume_lots_t volLots;
 
 			::std::uint8_t bLong;
 			intTickerId_t tid;
@@ -155,12 +156,12 @@ namespace t18 {
 
 			prxyTsDeal()noexcept{}
 			prxyTsDeal(mxTimestamp _t, real_t _p, volume_lots_t _v, dealnum_t _n, bool bL, intTickerId_t _id) noexcept
-				: ts(_t), pr(_p), volLots(_v), dealNum(_n), bLong(static_cast<decltype(bLong)>(bL)), tid(_id)
+				: ts(_t), dealNum(_n), pr(_p), volLots(_v), bLong(static_cast<decltype(bLong)>(bL)), tid(_id)
 			{}
 
 			const char* _to_string() const{
 				static char _b[128];
-				sprintf_s(_b, "%s %0.4f %u (%u) %s", ts.to_string().c_str(), pr, volLots, dealNum, bLong ? "BUY" : "SELL");
+				sprintf_s(_b, "%s %0.4f %u (%llu) %s", ts.to_string().c_str(), pr, volLots, dealNum, bLong ? "BUY" : "SELL");
 				return static_cast<const char*>(_b);
 			}
 
@@ -173,7 +174,7 @@ namespace t18 {
 				return tsTick(ts, pr, static_cast<volume_t>(volLots*lotSize));
 			}
 		};
-		static constexpr size_t prxyTsDeal_Size = 8 + (sizeof(real_t) > sizeof(int) ? 8 : 4) + 4 + 4 + 1 + 1 + 2;
+		static constexpr size_t prxyTsDeal_Size = 8 + 8 + (sizeof(real_t) > sizeof(int) ? 8 : 4) + 4 + 1 + 1 + 2;
 		T18_COMP_PRAGMA_PACK_POP_ASSERT_SIZE(prxyTsDeal, prxyTsDeal_Size);
 
 		T18_COMP_PRAGMA_PACK(4);

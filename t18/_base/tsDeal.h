@@ -23,7 +23,7 @@ namespace t18 {
 
 	typedef decltype("num"_s) dealnum_ht;
 	//seems to be enough
-	typedef ::std::uint32_t dealnum_t;
+	typedef ::std::uint64_t dealnum_t;
 
 	struct tsDeal : public tsDirTick {
 	private:

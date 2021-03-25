@@ -104,10 +104,10 @@ namespace t18 {
 			namespace _i {
 				template<typename T> struct tsDirDeal;
 				template<> struct tsDirDeal<float> {
-					static constexpr auto fmt = "%lu,%lu,%f,%lf,%lu,%ld"_s;
+					static constexpr auto fmt = "%lu,%lu,%f,%lf,%llu,%ld"_s;
 				};
 				template<> struct tsDirDeal<double> {
-					static constexpr auto fmt = "%lu,%lu,%lf,%lf,%lu,%ld"_s;
+					static constexpr auto fmt = "%lu,%lu,%lf,%lf,%llu,%ld"_s;
 				};
 
 				/*template<typename T> struct tsDirDeal;
@@ -136,7 +136,7 @@ namespace t18 {
 					date_ult d;
 					time_ult t;
 
-					::std::uint32_t dealNum;
+					dealnum_t dealNum;
 					::std::int32_t bIsLong;
 
 					nRead = fscanf_s(hF, csvFormat.c_str(), &d, &t, &val.q, &val.v, &dealNum, &bIsLong);
