@@ -584,6 +584,12 @@ namespace t18 {
 				return sprintf_s(pReq, "%s(%s|%I64x)", pClass, pTicker, lastDeal._get());
 			}
 
+			// the required buffer len for AllTradesRequest minus the length of strings with ticker&class
+			// 3 delimiters (|)
+			// 16 chars for i64 in hex form
+			// and 1 for null termination
+			static constexpr int sAllTradesRequest_addedBufLen = 3 + 8 * 2 + 1;
+
 		};
 
 		template<typename HandlerT>

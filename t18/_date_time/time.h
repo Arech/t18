@@ -60,7 +60,7 @@ namespace t18 {
 		}
 		static bool untie_miltime_s(time_ult _milT, int& h, int& m, int& s)noexcept {
 			const auto milT = static_cast<::std::make_signed_t<time_ult>>(_milT);
-			if (milT <= 0) return false;
+			if (milT < 0) return false;
 			s = milT % 100;
 			if (s < 0 || s > 59) return false;
 			const auto dr = ::std::div(milT, 10000);
@@ -83,6 +83,12 @@ namespace t18 {
 
 	public:
 		constexpr mxTime()noexcept : val(impl::emptyValue) {}
+
+		//special constructor that helps to drop .isEmpty checks.
+		//Also makes a perfectly valid 00:00:00 time
+		constexpr mxTime(tag_mxTime) noexcept : val(0) {
+			static_assert(0 != impl::emptyValue, "");
+		}
 
 		mxTime(tag_milTime, time_ult _v) noexcept : val(miltime2mxtime(_v)) {}
 		constexpr mxTime(tag_mxTime, time_ult _v)noexcept : val(_v) {}

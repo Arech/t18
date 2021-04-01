@@ -223,7 +223,7 @@ namespace t18 {
 			//valOnlyDays is an ordinary timestamp_ult >> ofsDay
 			static constexpr timestamp_ult _nextDay(timestamp_ult valOnlyDays)noexcept {
 				T18_ASSERT(valOnlyDays < (maxValue >> ofsDay));
-				timestamp_ult origVal = valOnlyDays << ofsDay;
+				const timestamp_ult origVal = valOnlyDays << ofsDay;
 
 				const int m = Month(origVal);
 				const int d = Day(origVal);
@@ -232,15 +232,14 @@ namespace t18 {
 				if (LIKELY(d < daysInThisMonth)) {
 					valOnlyDays = (valOnlyDays + 1) << ofsDay;
 				} else {
-					valOnlyDays >>= bitsDay;//got month
+					valOnlyDays >>= bitsDay;//got month into lowest bits of valOnlyDays
 					if (LIKELY(m < 12)) {
 						valOnlyDays = ((valOnlyDays + 1) << ofsMonth) | (timestamp_ult(1) << ofsDay);
 					} else {
 						valOnlyDays = (((valOnlyDays >> bitsMonth) + 1) << ofsYear) | ((timestamp_ult(1) << ofsMonth) | (timestamp_ult(1) << ofsDay));
-						T18_ASSERT(valOnlyDays < maxValue);
 					}
 				}
-
+				T18_ASSERT(valOnlyDays < maxValue);
 				T18_ASSERT(valOnlyDays > origVal);
 				return valOnlyDays;
 			}
@@ -248,6 +247,37 @@ namespace t18 {
 				return _nextDay(val >> ofsDay);
 			}
 
+			//////////////////////////////////////////////////////////////////////////
+			//valOnlyDays is an ordinary timestamp_ult >> ofsDay
+			static constexpr timestamp_ult _prevDay(timestamp_ult valOnlyDays)noexcept {
+				T18_ASSERT(valOnlyDays < (maxValue >> ofsDay));
+				const timestamp_ult origVal = valOnlyDays << ofsDay;
+
+				const int m = Month(origVal);
+				const int d = Day(origVal);
+				
+				//const int daysInThisMonth = _uglyTime::daysInMonth(m, _uglyTime::isLeapYear(Year(origVal)));
+
+				if (LIKELY(d > 1)) {
+					valOnlyDays = (valOnlyDays - 1) << ofsDay;
+				} else {
+					valOnlyDays >>= bitsDay;//got month into lowest bits of valOnlyDays
+					if (LIKELY(m > 1)) {
+						const int daysInPrevMonth = _uglyTime::daysInMonth(m - 1, _uglyTime::isLeapYear(Year(origVal)));
+						valOnlyDays = ((valOnlyDays - 1) << ofsMonth) | (timestamp_ult(daysInPrevMonth) << ofsDay);
+					} else {
+						valOnlyDays = (((valOnlyDays >> bitsMonth) - 1) << ofsYear) | ((timestamp_ult(12) << ofsMonth) | (timestamp_ult(31) << ofsDay));
+					}
+				}
+
+				T18_ASSERT(valOnlyDays < origVal);
+				return valOnlyDays;
+			}
+			static constexpr timestamp_ult prevDayStart(timestamp_ult val)noexcept {
+				return _prevDay(val >> ofsDay);
+			}
+
+			//////////////////////////////////////////////////////////////////////////
 			//valOnlyHours is an ordinary timestamp_ult >> ofsHour
 			static constexpr timestamp_ult _nextHour(timestamp_ult valOnlyHours)noexcept {
 				T18_ASSERT(valOnlyHours < (maxValue >> ofsHour));

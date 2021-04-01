@@ -167,15 +167,18 @@ namespace t18 {
 
 		void set_time(int h, int m, int s, int mks)noexcept { val = impl::set_time(val, h, m, s, mks); }
 		void set_StartOfDay()noexcept { val = impl::set_time(val, 0u, 0); }
+		void set_time(const mxTime mxT)noexcept { val = impl::set_time(val, mxT._get(), 0); }
 
 		//////////////////////////////////////////////////////////////////////////
 		static _mxTimestamp now()noexcept {
 			const auto t = ::std::time(nullptr);
 			if (LIKELY(static_cast<::std::time_t>(-1) != t)) {
 				::std::tm tms;
+
+				//#FFFUUUU, MS invented it's own version of localtime_s() so sorry for others... Will update later.
 				if (LIKELY(0 == ::localtime_s(&tms, &t))) {
-					return _mxTimestamp(pTM->tm_year + 1900, pTM->tm_mon + 1, pTM->tm_mday
-						, pTM->hour, pTM->tm_min, pTM->tm_sec);
+					return _mxTimestamp(tms.tm_year + 1900, tms.tm_mon + 1, tms.tm_mday
+						, tms.tm_hour, tms.tm_min, tms.tm_sec);
 				}
 			}
 			return _mxTimestamp();
@@ -211,17 +214,26 @@ namespace t18 {
 			T18_ASSERT(!empty());
 			return _mxTimestamp(impl::nextDayStart(val));
 		}
+		constexpr _mxTimestamp prevDayStart()const noexcept {
+			T18_ASSERT(!empty());
+			return _mxTimestamp(impl::prevDayStart(val));
+		}
+		constexpr _mxTimestamp prevDayAt(const mxTime mxT)const noexcept {
+			T18_ASSERT(!empty() && !mxT.empty());
+			return _mxTimestamp(prevDayStart().Date(), mxT);
+		}
 
 		constexpr _mxTimestamp plusYear()const noexcept {
 			T18_ASSERT(Year() < bits::maxYear);
 			return _mxTimestamp(impl::plusYear(val));
 		}
 
-		//shouldn't make operator-/+/etc to underscore that it's just a surrogate
-		constexpr timestamp_diff_t uglyDiffMks(_mxTimestamp ts2)const {
+		//shouldn't make operator-/+/etc to underscore that it's just a surrogate.
+		//see implementation for details (last time it was "WARNING: the timestamps MUST NOT differ more than a year")
+		constexpr timestamp_diff_t uglyDiffMks(const _mxTimestamp ts2)const {
 			return impl::uglyDiffMks(val, ts2.val);
 		}
-		constexpr timestamp_diff_t _yearTime(bool bLeapYear = false)const noexcept {
+		constexpr timestamp_diff_t _yearTime(const bool bLeapYear = false)const noexcept {
 			return impl::_yearTime(val, bLeapYear);
 		}
 

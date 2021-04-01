@@ -61,6 +61,12 @@
 #define T18_COMP_SILENCE_DEPRECATED _Pragma("clang diagnostic push") \
      _Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"")
 
+#define T18_COMP_SILENCE_UNUSED_PARAM _Pragma("clang diagnostic push") \
+     _Pragma("clang diagnostic ignored \"-Wunused-parameter\"")
+
+#define T18_COMP_SILENCE_MISSING_NORETURN _Pragma("clang diagnostic push") \
+     _Pragma("clang diagnostic ignored \"-Wmissing-noreturn\"")
+
 #define T18_COMP_POP _Pragma("clang diagnostic pop")
 
 #define T18_COMP_SILENCE_REQ_GLOBAL_CONSTR _Pragma("clang diagnostic ignored \"-Wglobal-constructors\"")
